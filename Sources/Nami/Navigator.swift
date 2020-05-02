@@ -37,7 +37,7 @@ public func replaceRoot<T: View>(with view: T, animation: NavigatorAnimation? = 
   let subStack = AppStack(views: [ViewWrapper(view: AnyView(view))])
   stack = Stack([subStack])
   changeViewController(for: UIApplication.keyWindow,
-                        rootViewController: UIHostingController(rootView: view),
+                        rootViewController: UIHostingController(rootView: subStack),
                         animation: animation)
 }
 
